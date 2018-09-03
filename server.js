@@ -2,6 +2,7 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 var app = express();
+const port = process.env.PORT || 3000;
 
 // app.get('/',(req,res)=>{
 //     res.send('<h1>hello world</h1>');
@@ -54,6 +55,6 @@ app.get('/bad',(req,res)=>{
 })
 })
 
-app.listen(3001,()=>{
-    console.log('server is up now');
+app.listen(port,()=>{
+    console.log(`server is up now ${port}`);
 });
